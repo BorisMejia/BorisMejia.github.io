@@ -1,0 +1,36 @@
+---
+import ExperienceItem from './ExperienciaItem.astro';
+const EXPERIENCE = [
+    {   
+        company: "IPS Suramericana",
+        title: "Desarrollador Backend",
+        date: "June 16, 2023 to December 14, 2024",
+        description: "Desarrollador Backend en IPS Suramericana, trabajando con tecnologías como Java, Spring para crear APIs eficientes y escalables. Implementé soluciones de integración con sistemas de terceros y optimicé el rendimiento de las bases de datos.",
+
+    },
+    {
+        company: "NN",
+        title: "Desarrollador Full Stack",
+        date: "June 16, 2023 to December 14, 2024",
+        description: "Desarrollador Backend en IPS Suramericana, trabajando con tecnologías como Node.js, Express y MongoDB para crear APIs eficientes y escalables. Implementé soluciones de integración con sistemas de terceros y optimicé el rendimiento de las bases de datos.",
+    } 
+];
+---
+ 
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+
+
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-6"> 
+                <ExperienceItem {...experience}/>
+            </li>
+            
+
+        ))
+    }
+
+
+
+  
+</ol>

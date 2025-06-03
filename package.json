@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.8.1"
+    "@fontsource-variable/onest": "^5.2.9",
+    "@tailwindcss/vite": "^4.1.8",
+    "astro": "^5.8.1",
+    "borismejia-github-io": "file:",
+    "tailwindcss": "^4.1.8"
   }
 }

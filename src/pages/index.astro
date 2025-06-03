@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import "./global.css";
+import "@fontsource-variable/onest";
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Badge from "../components/Badge.astro";
+import GitHubIcon from "../shared/icons/GitHubIcon.astro";
+import LinkedInIcon from "../shared/icons/LinkedInIcon.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import ContainerSection from "../components/Container.astro";
+import AboutMe from "../components/AboutMe.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+    <ContainerSection class="py-35 pb-10">
+      <AboutMe />
+      <nav class="flex flex-row gap-x-2 mt-5">
+        <SocialPill href="https://github.com/BorisMejia">
+          <GitHubIcon class="size-6 gap" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="https://www.linkedin.com/in/borisffernandezm/">
+          <LinkedInIcon class="size-6" />
+          LinkedIn
+        </SocialPill>
+      </nav>
+    </ContainerSection>
+    <ContainerSection class="">
+		<h2 class="text-3xl font-semibold">Experiencia</h2>
+      <Experience />
+    </ContainerSection>
+  </main>
 </Layout>

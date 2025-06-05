@@ -5,10 +5,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
+site: 'https://BorisMejia.github.io/BorisMejia.github.io',
   vite: {
     plugins: [tailwindcss()],
-    ssr:{
-        noExternal: ['@fontsource-variable/onest']
-    }
+    ssr: {
+      noExternal: ['@fontsource-variable/onest'],
+    },
   },
 });

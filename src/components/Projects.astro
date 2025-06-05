@@ -1,0 +1,58 @@
+---
+import Java from "../shared/icons/JavaIcon.astro";
+import Spring from "../shared/icons/SpringIcon.astro";
+
+const TAGS = {
+  JAVA: {
+    name: "Java",
+    class: "bg-black text-white",
+    icon: Java,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-[#000] text-white",
+    icon: Spring
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Sistema de Autenticación FullStack",
+    description:
+      "Sistema de autenticación y autorización de usuarios en java con JWT y Spring Security, y implementacion de un frontend que autoriza el acceso a distintos elementos de la aplicacion si se encuentra el usuario autenticado.",
+    link: "#",
+    github: "",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnlzGE16ZOTkTACC9lO8hzBUHX08XFkt17Uw&s",
+    tags: [TAGS.JAVA, TAGS.SPRING],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, link, github, image, tags }) => (
+    <article class="py-5 items-center ">
+      <h3 class=" text-lg text-blue-400">{title}</h3>
+      <p class="text-xm mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`${tag.class} items-center flex gap-x-2 rounded-full text-xm py-1 px-2`}>
+                <tag.icon class="size-4"/>
+                {tag.name}
+            </span>
+
+            </li>
+        ))}
+      </ul>
+      <div class="flex justify-center">
+      <img
+        class=" rounded shadow-2xl shadow-fuchsia-500/30"
+        src={image}
+        alt={`Imagen del proyecto ${image}`}
+      />
+
+      </div>
+    </article>
+  ))
+}

@@ -31,7 +31,7 @@ const PROJECTS = [
 
 {
   PROJECTS.map(({ title, description, link, github, image, tags }) => (
-    <article class="py-5 items-center ">
+    <article class="space-y-5  py-5 items-center ">
       <h3 class=" text-lg text-blue-400">{title}</h3>
       <p class="text-xm mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-4 flex-row">
@@ -47,7 +47,7 @@ const PROJECTS = [
       </ul>
       <div class="flex justify-center">
       <img
-        class=" rounded shadow-2xl shadow-fuchsia-500/30"
+        class="rounded shadow-2xl shadow-fuchsia-500/30"
         src={image}
         alt={`Imagen del proyecto ${image}`}
       />
